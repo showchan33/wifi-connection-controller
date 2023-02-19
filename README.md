@@ -60,7 +60,7 @@ $ sudo ./wifi-connection-controller -c 192.168.1.1 -i wlan0 -s "HG8045Q-xxxx" -p
 
 ## Example using Systemd
 
-Please create the following service file.
+Please create the following service file at ``/etc/systemd/system/wifi-connection-controller.service``.
 
 ```service:/etc/systemd/system/wifi-connection-controller.service
 [Unit]
@@ -78,7 +78,7 @@ Type=simple
 WantedBy = multi-user.target
 ```
 
-The environment variable file is written as below.
+The environment variable file ``/etc/default/wifi-connection-controller`` is written as below.
 
 ```env:/etc/default/wifi-connection-controller
 PING_IP="192.168.1.1"
