@@ -69,7 +69,7 @@ Description = wifi-connection-controller
 [Service]
 EnvironmentFile=/etc/default/wifi-connection-controller
 ExecStart=/usr/local/bin/wifi-connection-controller -c $PING_IP -i $IFACE -s $ACCSSS_POINT -p $PASSWORD -e $INTERVAL_SEC
-ExecStop=/bin/kill -WINCH ${MAINPID}
+ExecStop=/bin/kill -SIGTERM ${MAINPID}
 KillSignal=SIGCONT
 Restart=always
 Type=simple
